@@ -23,7 +23,7 @@ export const addNewProduct = async (formData) => {
 
 export const getAllAdminProducts = async () => {
   try {
-    const res = await fetch("https://online-bike-showroom.vercel.app/product/listing/all-products", {
+    const res = await fetch("https://online-bike-showroom-eight.vercel.app/product/listing/all-products", {
       method: "GET",
       cache: "no-store",
     });
