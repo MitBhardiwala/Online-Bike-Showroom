@@ -1,5 +1,6 @@
 import AuthUser from "@/middleware/AuthUser";
 import { NextResponse } from "next/server";
+import { apiURL } from "@/utils";
 
 const stripe = require("stripe")(
   "sk_test_51ODCHRSC2fltmekGNZcI3E79FSvw3RnAHu6iPyofHb7K3M4IDkAJrpgo7JUc1WrLzhQlfZfFVrA4WIfXdgoo4NkK00DatfnPIP"
@@ -17,8 +18,8 @@ export async function POST(req) {
         payment_method_types: ["card"],
         line_items: res,
         mode: "payment",
-        success_url: "http://localhost:3000/checkout" + "?status=success",
-        cancel_url: "http://localhost:3000/checkout" + "?status=cancel",
+        success_url: apiURL + "/checkout" + "?status=success",
+        cancel_url: apiURL + "/checkout" + "?status=cancel",
       });
 
       return NextResponse.json({

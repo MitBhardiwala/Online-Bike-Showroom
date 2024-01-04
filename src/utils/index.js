@@ -238,3 +238,5 @@ export const addNewAddressFormControls = [
     componentType: "input",
   },
 ];
+
+export const apiURL = "";
