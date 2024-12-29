@@ -1,0 +1,6 @@
+import random
+
+# Generate a string of length 100 with digits 0-9
+random_string = ''.join(random.choice('123456789') for _ in range(100))
+
+print(random_string)

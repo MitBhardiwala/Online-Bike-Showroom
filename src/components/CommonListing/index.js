@@ -8,7 +8,7 @@ import Notification from "../Notification";
 
 export default function CommonListing({ data }) {
   const router = useRouter();
-
+  console.log("came", data);
   useEffect(() => {
     router.refresh();
   }, []);
